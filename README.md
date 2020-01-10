@@ -29,3 +29,28 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Zugang Firebase
 <h4>deluxxteam9@gmail.com</h4>
 <b><u>Passwort:</u> p.enis69!</b>
+
+## Firebase Skript
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAheiLsW-Y_b8bYi-_MHPvWJZkLCyGfx1U",
+    authDomain: "cook-chill.firebaseapp.com",
+    databaseURL: "https://cook-chill.firebaseio.com",
+    projectId: "cook-chill",
+    storageBucket: "cook-chill.appspot.com",
+    messagingSenderId: "328793357395",
+    appId: "1:328793357395:web:987a443bab0dc0be929aa6",
+    measurementId: "G-4YX6G18V9X"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
