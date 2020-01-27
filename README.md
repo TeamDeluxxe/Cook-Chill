@@ -31,6 +31,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 <b><u>Passwort:</u> p.enis69!</b>
 
 ## Firebase Skript
+<p>Zugangsdaten für Firebase</p>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
 
@@ -51,3 +52,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 </script>
+
+## Node_Modules
+<p>Jeder muss die Erweiterungen eigenständig installieren:</p>
+<p>npm install bootstrap</p>
