@@ -57,3 +57,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 <p>Jeder muss die Erweiterungen eigenständig installieren:</p>
 <p>npm install bootstrap</p>
 <p>npm install firebase @angular/fire --save</p>
+<p>npm i --save-dev typescript@3.4.5</p>
