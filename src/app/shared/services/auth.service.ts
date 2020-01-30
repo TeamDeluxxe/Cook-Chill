@@ -1,5 +1,5 @@
 import { Injectable, NgZone } from '@angular/core';
-import { User } from './user';
+import { User } from '../../models/user';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
@@ -31,7 +31,7 @@ export class AuthService {
     })
   }
 
-  // Melden Sie sich mit E-Mail / Passwort an
+  // Anmelden mit E-Mail / Passwort an
   SignIn(email, password) {
     return this.afAuth.auth.signInWithEmailAndPassword(email, password)
       .then((result) => {
@@ -44,7 +44,7 @@ export class AuthService {
       })
   }
 
-  // Melden Sie sich mit E-Mail / Passwort an
+  // Registrieren mit E-Mail / Passwort an
   SignUp(email, password) {
     return this.afAuth.auth.createUserWithEmailAndPassword(email, password)
       .then((result) => {
@@ -57,7 +57,7 @@ export class AuthService {
       })
   }
 
-  // E-Mail-Bestätigung senden, wenn sich ein neuer Benutzer anmeldet
+  // E-Mail-Bestätigung senden, wenn sich ein neuer Benutzer registrieren
   SendVerificationMail() {
     return this.afAuth.auth.currentUser.sendEmailVerification()
       .then(() => {
@@ -97,7 +97,7 @@ export class AuthService {
   }
 
   /* Einrichten der Benutzerdaten bei der Anmeldung mit Benutzername / Passwort,
-  Melden Sie sich mit Benutzername / Passwort in der Firestore-Datenbank mit AngularFirestore + AngularFirestoreDocument-Dienst */
+  Anmeldung Benutzername / Passwort in der Firestore-Datenbank mit AngularFirestore + AngularFirestoreDocument-Dienst */
   SetUserData(user) {
     const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
     const userData: User = {
