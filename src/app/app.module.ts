@@ -23,6 +23,7 @@ import { environment } from '../environments/environment';
 
 // Auth service
 import { AuthService } from './shared/services/auth.service';
+import { OwnEventsComponent } from './components/own-events/own-events.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { AuthService } from './shared/services/auth.service';
     SignUpComponent,
     DashboardComponent,
     ForgotPasswordComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    OwnEventsComponent
   ],
   imports: [
     BrowserModule,
