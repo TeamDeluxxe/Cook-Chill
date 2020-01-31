@@ -7,6 +7,11 @@
         <ul class="nav flex-column">
           <li class="nav-item">
             <a class="nav-link active">
+              <i class="material-icons">settings</i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active">
               <i class="fas fa-user"></i>Profil
             </a>
           </li>
@@ -25,23 +30,50 @@
       <div class="inner-adjust">
 
         <div class="pt-3 pb-2 mb-3 border-bottom">
-          <h1 class="h2">Nur Für testen </h1>
+          <h1 class="h2">Profilübersicht</h1>
         </div>
         <!-- Show user data when logged in -->
         <div class="row" *ngIf="authService.userData as user">
           <div class="col-md-12">
             <div class="media">
               <div class="media-body">
-           <!--      <h1><strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h1> -->
+<!--                 <h1><strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h1>-->
+                <p>Name:</p>
                 <p>Email: <strong>{{user.email}}</strong></p>
-                <p>Email verifiziert: <strong>{{user.emailVerified}}</strong></p>
+<!--                <p>Email verifiziert: <strong>{{user.emailVerified}}</strong></p>-->
               </div>
             </div>
           </div>
         </div>
-
+        <div class="col-md-8">
+          <h4>Eigene Veranstaltungen</h4>
+          <ul class="list-group list-group-horizontal-sm">
+            <li class="list-group-item">Veranstaltung 1</li>
+            <li class="list-group-item">Veranstaltung 2</li>
+            <li class="list-group-item">Veranstaltung 3</li>
+          </ul>
+        </div>
+        <div class="col-md-8">
+          <h4>Nächste Veranstaltungen</h4>
+          <ul class="list-group list-group-horizontal-sm">
+            <li class="list-group-item">Veranstaltung 1</li>
+            <li class="list-group-item">Veranstaltung 2</li>
+            <li class="list-group-item">Veranstaltung 3</li>
+          </ul>
+        </div>
+        <div class="col-md-8">
+          <h4>Vergangene Veranstaltungen</h4>
+          <ul class="list-group list-group-horizontal-sm">
+            <li class="list-group-item">Veranstaltung 1</li>
+            <li class="list-group-item">Veranstaltung 2</li>
+            <li class="list-group-item">Veranstaltung 3</li>
+          </ul>
+        </div>
       </div>
     </main>
 
   </div>
 </div>
+
+
+

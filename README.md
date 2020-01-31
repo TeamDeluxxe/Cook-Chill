@@ -59,3 +59,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 <p>npm install firebase @angular/fire --save</p>
 <p>npm i --save-dev typescript@3.4.5</p>
 <p>Polyfills.ts öffnen und von dort npm install ausführen</p>
+<p>npm install material-design-icons</p>
