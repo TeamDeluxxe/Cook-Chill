@@ -1,1 +1,86 @@
-/* You can add global styles to this file, and also import other style files */
+/* fonts & global styles */
+
+/*
+*   color-primary:
+*   color-text:
+*   color-accent:
+*
+*
+*
+*/
+
+
+/* import from https://google-webfonts-helper.herokuapp.com/fonts/roboto?subsets=latin */
+/* roboto-regular - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/roboto-v20-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Roboto'), local('Roboto-Regular'),
+  url('/assets/fonts/roboto-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/assets/fonts/roboto-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('/assets/fonts/roboto-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+  url('/assets/fonts/roboto-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('/assets/fonts/roboto-v20-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+/* roboto-italic - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/assets/fonts/roboto-v20-latin-italic.eot'); /* IE9 Compat Modes */
+  src: local('Roboto Italic'), local('Roboto-Italic'),
+  url('/assets/fonts/roboto-v20-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/assets/fonts/roboto-v20-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+  url('/assets/fonts/roboto-v20-latin-italic.woff') format('woff'), /* Modern Browsers */
+  url('/assets/fonts/roboto-v20-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('/assets/fonts/roboto-v20-latin-italic.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+/* roboto-700 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/fonts/roboto-v20-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Roboto Bold'), local('Roboto-Bold'),
+  url('/assets/fonts/roboto-v20-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/assets/fonts/roboto-v20-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+  url('/assets/fonts/roboto-v20-latin-700.woff') format('woff'), /* Modern Browsers */
+  url('/assets/fonts/roboto-v20-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('/assets/fonts/roboto-v20-latin-700.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+body {
+  font-size: 14px;
+  font-family: Roboto, sans-serif;
+}
+
+h1, h2 {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+h3, h4 {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.btn_primary {
+  margin: 10px 0;
+  cursor: pointer;
+  background-color: #1e90ff;
+}
+
+.link {
+  cursor: pointer;
+}
+
+input {
+  border-radius: 5px;
+}
