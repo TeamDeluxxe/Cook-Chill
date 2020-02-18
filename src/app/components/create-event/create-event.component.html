@@ -1,0 +1,135 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<form>
+  <div class="form-group row">
+    <label for="event_name" class="col-4 col-form-label">Name</label>
+    <div class="col-8">
+      <input id="event_name" name="event_name" placeholder="Name" type="text" class="form-control" required="required">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="event_date" class="col-4 col-form-label">Datum</label>
+    <div class="col-8">
+      <input id="event_date" name="event_date" placeholder="Datum" type="date" class="form-control" required="required">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="event_time" class="col-4 col-form-label">Uhrzeit</label>
+    <div class="col-8">
+      <input id="event_time" name="event_time" placeholder="Uhrzeit" type="text" class="form-control" required="required">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="event_subscriber_imit" class="col-4 col-form-label">Teilnehmerlimit</label>
+    <div class="col-8">
+      <input id="event_subscriber_imit" name="event_subscriber_imit" placeholder="Teilnehmerlimit" type="text" class="form-control" required="required">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="event_subscriber_type" class="col-4 col-form-label">Teilnehmer</label>
+    <div class="col-8">
+      <select id="event_subscriber_type" name="event_subscriber_type" class="custom-select" multiple="multiple">
+        <option value="couples">Paare</option>
+        <option value="singles">Singles</option>
+        <option value="womens">Frauen</option>
+        <option value="mens">Männer</option>
+        <option value=""></option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="event_categorie" class="col-4 col-form-label">Kategorie</label>
+    <div class="col-8">
+      <select id="event_categorie" name="event_categorie" class="custom-select" required="required">
+        <option value="breakfast">Frühstück</option>
+        <option value="dinner">Dinner</option>
+        <option value="brunch">Brunch</option>
+        <option value="themenight">Themenabend</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-4">Wer kocht?</label>
+    <div class="col-8">
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="event_cook" id="event_cook_0" type="radio" required="required" class="custom-control-input" value="host">
+        <label for="event_cook_0" class="custom-control-label">Gastgeber</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="event_cook" id="event_cook_1" type="radio" required="required" class="custom-control-input" value="together">
+        <label for="event_cook_1" class="custom-control-label">Zusammen</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-4">Was wird gekocht?</label>
+    <div class="col-8">
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="event_meal_decision" id="event_meal_decision_0" type="radio" required="required" class="custom-control-input" value="default">
+        <label for="event_meal_decision_0" class="custom-control-label">Vorgabe</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="event_meal_decision" id="event_meal_decision_1" type="radio" required="required" class="custom-control-input" value="arrangement">
+        <label for="event_meal_decision_1" class="custom-control-label">Nach Absprache</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="event_meal" class="col-4 col-form-label">Gericht</label>
+    <div class="col-8">
+      <textarea id="event_meal" name="event_meal" cols="40" rows="2" class="form-control"></textarea>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-4">Einkaufen?</label>
+    <div class="col-8">
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="event_buy" id="event_buy_0" type="radio" required="required" class="custom-control-input" value="host">
+        <label for="event_buy_0" class="custom-control-label">Gastgeber</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="event_buy" id="event_buy_1" type="radio" required="required" class="custom-control-input" value="together">
+        <label for="event_buy_1" class="custom-control-label">Zusammen</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="event_price_together" class="col-4 col-form-label">Preis</label>
+    <div class="col-8">
+      <input id="event_price_together" name="event_price_together" type="text" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="event_price_host" class="col-4 col-form-label">Preis</label>
+    <div class="col-8">
+      <input id="event_price_host" name="event_price_host" type="text" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="event_registration_deadline" class="col-4 col-form-label">Anmeldefrist</label>
+    <div class="col-8">
+      <input id="event_registration_deadline" name="event_registration_deadline" placeholder="Anmeldefrist" type="text" class="form-control" required="required">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="event_deadline_confirmation" class="col-4 col-form-label">Bestätigungsfrist</label>
+    <div class="col-8">
+      <input id="event_deadline_confirmation" name="event_deadline_confirmation" type="text" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="event_allergies" class="col-4 col-form-label">Allergien</label>
+    <div class="col-8">
+      <select id="event_allergies" name="event_allergies" class="custom-select">
+        <option value="gluten">Glutenfrei</option>
+        <option value="nuts">Nussallergie</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="offset-4 col-8">
+      <button name="submit" type="submit" class="btn btn-primary">Erstellen</button>
+    </div>
+  </div>
+</form>
