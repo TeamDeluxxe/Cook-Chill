@@ -54,7 +54,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 </script>
 
 ## Node_Modules
-<p>Jeder muss die Erweiterungen eigenständig installieren:</p>
+<p>Wenn wir die Erweiterungen immer mit --save am Ende schreiben, werden diese automatisch in die package.json gepackt. Der nächste Nutzer muss sich dann nur den aktuellen Stand runterladen und dann "npm install" ausführen. Damit werden alle fehlenden Erweiterungen installiert und vorhandene Erweiterungen aktualisiert.</p>
+<p>Trotzdem macht eine Liste aller Erweiterungen Sinn, falls mal was schief geht. Hier die Liste der vorhandenen Erweiterungen:</p>
 <p>npm install bootstrap</p>
 <p>npm install firebase @angular/fire --save</p>
 <p>npm i --save-dev typescript@3.4.5</p>

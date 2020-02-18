@@ -1,33 +1,38 @@
-<div class="displayTable">
-  <div class="displayTableCell">
+<div class="sign_in_background">
+  <div class="container">
+    <div class="displayTable">
+      <div class="displayTableCell">
+        <div class="sign_in_box">
+          <div class="row">
+            <div class="authBlock">
+              <h1>Anmelden</h1>
+              <div class="formGroup">
+                <label>
+                  <input type="text" class="formControl" placeholder="Benutzername" #userName required>
+                </label>
+              </div>
+              <div class="formGroup">
+                <label>
+                  <input type="password" class="formControl" placeholder="Passwort" #userPassword required>
+                </label>
+              </div>
+              <!-- Calling SignIn Api from AuthService -->
+              <div class="formGroup">
+                <input type="button" class="btn btn_primary" value="Login" (click)="authService.SignIn(userName.value, userPassword.value)">
+              </div>
 
-    <div class="authBlock">
-      <h3>Anmelden</h3>
-      <div class="formGroup">
-        <label>
-          <input type="text" class="formControl" placeholder="Benutzername" #userName required>
-        </label>
-      </div>
-
-      <div class="formGroup">
-        <label>
-          <input type="password" class="formControl" placeholder="Passwort" #userPassword required>
-        </label>
-      </div>
-
-      <!-- Calling SignIn Api from AuthService -->
-      <div class="formGroup">
-        <input type="button" class="btn btnPrimary" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)">
-      </div>
-
-      <div class="forgotPassword">
-        <span routerLink="/forgot-password">Passwort vergessen?</span>
+              <div class="forgotPassword">
+                <span class="link" routerLink="/forgot-password">Passwort vergessen?</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="redirectToLogin">
+              <span class="redirect link" routerLink="/register-user">Registrieren</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="redirectToLogin">
-     <span class="redirect" routerLink="/register-user"> Registrieren</span>
-    </div>
-
   </div>
 </div>

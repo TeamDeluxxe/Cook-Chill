@@ -1,0 +1,20 @@
+.sign_in_background {
+  background-image: url("src/assets/images/food_wallpaper_small.jpg");
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.sign_in_box {
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  box-shadow: 0 0 20px #000;
+  border-radius: 10px;
+}
+
+.row {
+  margin: 0;
+}
