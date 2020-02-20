@@ -25,6 +25,8 @@ import { environment } from '../environments/environment';
 import { AuthService } from './shared/services/auth.service';
 import { OwnEventsComponent } from './components/own-events/own-events.component';
 import { NextEventsComponent } from './components/next-events/next-events.component';
+import {SidebarModule} from 'ng-sidebar';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 
 @NgModule({
@@ -36,7 +38,8 @@ import { NextEventsComponent } from './components/next-events/next-events.compon
     ForgotPasswordComponent,
     VerifyEmailComponent,
     OwnEventsComponent,
-    NextEventsComponent
+    NextEventsComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,8 @@ import { NextEventsComponent } from './components/next-events/next-events.compon
     AngularFireAuthModule,
     AngularFirestoreModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    SidebarModule.forRoot()
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

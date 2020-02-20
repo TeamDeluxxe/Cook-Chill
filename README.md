@@ -31,7 +31,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 <b><u>Passwort:</u> p.enis69!</b>
 
 ## Firebase Skript
-<p>Zugangsdaten für Firebase</p>
+<p>Zugangsdaten für Firebase (auskommentiert)</p>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
 
@@ -53,11 +53,18 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
   firebase.initializeApp(firebaseConfig);
 </script>
 
-## Node_Modules
+## Erweiterungen
 <p>Wenn wir die Erweiterungen immer mit --save am Ende schreiben, werden diese automatisch in die package.json gepackt. Der nächste Nutzer muss sich dann nur den aktuellen Stand runterladen und dann "npm install" ausführen. Damit werden alle fehlenden Erweiterungen installiert und vorhandene Erweiterungen aktualisiert.</p>
 <p>Trotzdem macht eine Liste aller Erweiterungen Sinn, falls mal was schief geht. Hier die Liste der vorhandenen Erweiterungen:</p>
-<p>npm install bootstrap</p>
-<p>npm install firebase @angular/fire --save</p>
-<p>npm i --save-dev typescript@3.4.5</p>
-<p>Polyfills.ts öffnen und von dort npm install ausführen</p>
-<p>npm install material-design-icons</p>
+<ul>
+<li>npm install bootstrap</li>
+<li>npm install firebase @angular/fire --save</li>
+<li>npm i --save-dev typescript@3.4.5</li>
+<li>npm install material-design-icons --save</li>
+<li>npm install ng-sidebar --save</li>
+</ul>
+
+<p>Bei einzelnen aufgetreten und seperat ausführen:</p>
+<ul>
+<li>Polyfills.ts öffnen und von dort npm install ausführen</li>
+</ul>
