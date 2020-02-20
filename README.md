@@ -28,7 +28,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Zugang Firebase
 <h4>deluxxteam9@gmail.com</h4>
-<b><u>Passwort:</u> p.enis69!</b>
+<b><u>Passwort:</u> TeamDeluxxx!2020</b>
 
 ## Firebase Skript
 <p>Zugangsdaten für Firebase (auskommentiert)</p>
