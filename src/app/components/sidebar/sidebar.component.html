@@ -5,25 +5,20 @@
       <div class="sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active">
-              <i class="material-icons">settings</i>
-            </a>
+            <a class="nav-link active"><i class="material-icons">settings</i></a>
+          </li>
+          <li class="nav-item bg-light">
+            <a class="nav-link active" routerLink="/dashboard">Profil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active">
-              <i class="fas fa-user"></i>Profil
-            </a>
+            <a class="nav-link active"><i class="material-icons"></i>Veranstaltung erstellen</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active">
-              <i class="fas fa-user"></i>Veranstaltung erstellen
-            </a>
+          <li class="nav-item bg-light">
+            <a class="nav-link active"><i class="material-icons"></i>Veranstaltungsliste</a>
           </li>
           <!-- Aufruf von SignOut () Api von AuthService -->
           <li class="nav-item">
-            <a class="nav-link" (click)="authService.SignOut()">
-              <i class="fas fa-sign-out-alt"></i>Ausloggen
-            </a>
+            <a class="nav-link" (click)="authService.SignOut()">Ausloggen</a>
           </li>
         </ul>
       </div>
@@ -31,6 +26,6 @@
   </ng-sidebar>
   <!-- Page content -->
   <div ng-sidebar-content class="sidebar_page_content">
-    <i class="material-icons nav_handler" (click)="toggleSidebar()">menu</i>
+    <i class="material-icons nav_handler link" (click)="toggleSidebar()">menu</i>
   </div>
 </ng-sidebar-container>
