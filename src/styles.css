@@ -77,6 +77,10 @@ h3, h4 {
   background-color: #1e90ff;
 }
 
+a {
+  cursor: pointer;
+}
+
 .link {
   cursor: pointer;
 }

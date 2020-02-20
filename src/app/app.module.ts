@@ -27,6 +27,8 @@ import { OwnEventsComponent } from './components/own-events/own-events.component
 import { NextEventsComponent } from './components/next-events/next-events.component';
 import { FooterComponent } from './components/footer/footer.component';
 import {CreateEventComponent} from './components/create-event/create-event.component';
+import {SidebarModule} from 'ng-sidebar';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 
 @NgModule({
@@ -39,6 +41,8 @@ import {CreateEventComponent} from './components/create-event/create-event.compo
     VerifyEmailComponent,
     OwnEventsComponent,
     NextEventsComponent,
+    SidebarComponent
+    NextEventsComponent,
     FooterComponent,
     CreateEventComponent
   ],
@@ -49,7 +53,8 @@ import {CreateEventComponent} from './components/create-event/create-event.compo
     AngularFireAuthModule,
     AngularFirestoreModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    SidebarModule.forRoot()
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

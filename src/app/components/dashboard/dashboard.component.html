@@ -1,30 +1,7 @@
 <!-- Sidebar navigation -->
+<app-sidebar></app-sidebar>
 <div class="container-fluid">
   <div class="row">
-
-    <nav class="col-md-2 d-md-block bg-light sidebar">
-      <div class="sidebar-sticky">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link active">
-              <i class="material-icons">settings</i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active">
-              <i class="fas fa-user"></i>Profil
-            </a>
-          </li>
-          <!-- Aufruf von SignOut () Api von AuthService -->
-          <li class="nav-item">
-            <a class="nav-link" (click)="authService.SignOut()">
-              <i class="fas fa-sign-out-alt"></i>Ausloggen
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
     <!-- Main -->
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
       <div class="inner-adjust">
