@@ -2,33 +2,18 @@
 <div class="container-fluid">
   <div class="row">
 
-    <nav class="col-md-2 d-md-block bg-light sidebar">
-      <div class="sidebar-sticky">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link active">
-              <i class="material-icons">settings</i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active">
-              <i class="fas fa-user"></i>Profil
-            </a>
-          </li>
-          <!-- Aufruf von SignOut () Api von AuthService -->
+<!--    Ausloggen-->
           <li class="nav-item">
             <a class="nav-link" (click)="authService.SignOut()">
-              <i class="fas fa-sign-out-alt"></i>Ausloggen
+              <button type="button" class="btn btn-primary fas fa-sign-out-alt">Ausloggen</button>
             </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+
 
     <!-- Main -->
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
       <div class="inner-adjust">
 
+        <form #form>
         <div class="pt-3 pb-2 mb-3 border-bottom">
           <h1 class="h2">Profilübersicht</h1>
         </div>
@@ -37,14 +22,23 @@
           <div class="col-md-12">
             <div class="media">
               <div class="media-body">
+
+                <div class="form-group">
+                    <label class="col-md-4">Name: <strong>{{user.displayName}}</strong></label>
+              </div>
+
+                <div class="form-group">
+                      <label class="col-md-4">Foto: <strong>{{user.photoURL}}</strong></label>
+                </div>
+
 <!--                 <h1><strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h1>-->
-                <p>Name:</p>
                 <p>Email: <strong>{{user.email}}</strong></p>
 <!--                <p>Email verifiziert: <strong>{{user.emailVerified}}</strong></p>-->
               </div>
             </div>
           </div>
         </div>
+        </form>
         <div class="col-md-8">
           <h4>Eigene Veranstaltungen</h4>
           <ul class="list-group list-group-horizontal-sm">

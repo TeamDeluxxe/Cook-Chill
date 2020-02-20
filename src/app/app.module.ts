@@ -25,6 +25,8 @@ import { environment } from '../environments/environment';
 import { AuthService } from './shared/services/auth.service';
 import { OwnEventsComponent } from './components/own-events/own-events.component';
 import { NextEventsComponent } from './components/next-events/next-events.component';
+import { ProfileOverviewComponent } from './components/profile-overview/profile-overview.component';
+import { UsersService } from './shared/services/users.service';
 
 
 @NgModule({
@@ -36,7 +38,8 @@ import { NextEventsComponent } from './components/next-events/next-events.compon
     ForgotPasswordComponent,
     VerifyEmailComponent,
     OwnEventsComponent,
-    NextEventsComponent
+    NextEventsComponent,
+    ProfileOverviewComponent,
   ],
   imports: [
     BrowserModule,
