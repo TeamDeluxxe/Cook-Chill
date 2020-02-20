@@ -29,6 +29,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import {CreateEventComponent} from './components/create-event/create-event.component';
 import {SidebarModule} from 'ng-sidebar';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import {EventListComponent} from "./components/event-list/event-list.component";
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     SidebarComponent,
     NextEventsComponent,
     FooterComponent,
-    CreateEventComponent
+    CreateEventComponent,
+    EventListComponent
   ],
   imports: [
     BrowserModule,

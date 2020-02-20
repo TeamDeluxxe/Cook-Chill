@@ -12,6 +12,7 @@ import { VerifyEmailComponent } from '../../components/verify-email/verify-email
 import { AuthGuard } from '../guard/auth.guard';
 import { SecureInnerPagesGuard } from '../guard/secure-inner-pages.guard';
 import {CreateEventComponent} from '../../components/create-event/create-event.component';
+import {EventListComponent} from "../../components/event-list/event-list.component";
 
 // Hier Routen
 const routes: Routes = [
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'forgot-password', component: ForgotPasswordComponent, canActivate: [SecureInnerPagesGuard] },
   { path: 'verify-email-address', component: VerifyEmailComponent, canActivate: [SecureInnerPagesGuard] },
-  { path: 'create-event', component: CreateEventComponent, canActivate: [AuthGuard] }
+  { path: 'create-event', component: CreateEventComponent, canActivate: [AuthGuard] },
+  { path: 'event-list', component: EventListComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({
