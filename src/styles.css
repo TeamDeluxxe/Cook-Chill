@@ -54,8 +54,10 @@
 }
 
 body {
-  font-size: 14px;
+  font-size: 18px;
   font-family: Roboto, sans-serif;
+  color: #737373;
+  height: 100%;
 }
 
 h1, h2 {
@@ -78,11 +80,19 @@ h3, h4 {
 }
 
 a {
+  text-decoration: none;
   cursor: pointer;
+  color: #737373;
 }
 
 .link {
   cursor: pointer;
+}
+
+a:active,a:focus,a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
 }
 
 input {
