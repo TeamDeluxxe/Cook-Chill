@@ -1,8 +1,6 @@
 .sidebar_container {
   position: absolute;
   height: 100vh;
-  border-right: #000 solid 1px;
-  box-shadow: black;
 }
 
 .material-icons {
@@ -14,4 +12,3 @@
   top: 10px;
   left: 10px;
 }
-
