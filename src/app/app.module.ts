@@ -41,7 +41,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     VerifyEmailComponent,
     OwnEventsComponent,
     NextEventsComponent,
-    SidebarComponent
+    SidebarComponent,
     NextEventsComponent,
     FooterComponent,
     CreateEventComponent
