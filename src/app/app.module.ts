@@ -26,6 +26,7 @@ import { AuthService } from './shared/services/auth.service';
 import { OwnEventsComponent } from './components/own-events/own-events.component';
 import { NextEventsComponent } from './components/next-events/next-events.component';
 import { FooterComponent } from './components/footer/footer.component';
+import {CreateEventComponent} from './components/create-event/create-event.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { FooterComponent } from './components/footer/footer.component';
     VerifyEmailComponent,
     OwnEventsComponent,
     NextEventsComponent,
-    FooterComponent
+    FooterComponent,
+    CreateEventComponent
   ],
   imports: [
     BrowserModule,
