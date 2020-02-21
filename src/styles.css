@@ -53,11 +53,17 @@
   url('/assets/fonts/roboto-v20-latin-700.svg#Roboto') format('svg'); /* Legacy iOS */
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-size: 18px;
   font-family: Roboto, sans-serif;
-  color: #737373;
-  height: 100%;
+}
+
+.content {
+  min-height: 100%;
 }
 
 h1, h2 {
@@ -79,20 +85,8 @@ h3, h4 {
   background-color: #1e90ff;
 }
 
-a {
-  text-decoration: none;
-  cursor: pointer;
-  color: #737373;
-}
-
 .link {
   cursor: pointer;
-}
-
-a:active,a:focus,a:hover
-{
-  color:#3366cc;
-  text-decoration:none;
 }
 
 input {
