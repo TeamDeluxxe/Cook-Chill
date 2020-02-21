@@ -2,6 +2,11 @@
   background-color:#eee;
   line-height:24px;
   color:#737373;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
 }
 .site-footer hr {
   border-top-color:#bbb;
