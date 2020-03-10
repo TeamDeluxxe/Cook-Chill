@@ -5,7 +5,6 @@
     <!-- Main -->
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
       <div class="inner-adjust">
-
         <div class="pt-3 pb-2 mb-3 border-bottom">
           <h1 class="h2">Profilübersicht</h1>
         </div>
@@ -14,7 +13,7 @@
           <div class="col-md-12">
             <div class="media">
               <div class="media-body">
-<!--                 <h1><strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h1>-->
+          <!--<h1><strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h1>-->
                 <p>Name:</p>
                 <p>Email: <strong>{{user.email}}</strong></p>
 <!--                <p>Email verifiziert: <strong>{{user.emailVerified}}</strong></p>-->
@@ -22,7 +21,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-12 dashboard_list">
           <h4>Eigene Veranstaltungen</h4>
           <ul class="list-group list-group-horizontal-sm">
             <li class="list-group-item">Veranstaltung 1</li>
@@ -30,15 +29,22 @@
             <li class="list-group-item">Veranstaltung 3</li>
           </ul>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-12 dashboard_list">
           <h4>Nächste Veranstaltungen</h4>
           <ul class="list-group list-group-horizontal-sm">
-            <li class="list-group-item">Veranstaltung 1</li>
+            <li class="list-group-item" (click)="activeEvent()" [ngClass]="active ? 'active' : ''"> Veranstaltung 1</li>
             <li class="list-group-item">Veranstaltung 2</li>
             <li class="list-group-item">Veranstaltung 3</li>
+            <li class="list-group-item">Veranstaltung 4</li>
           </ul>
+          <div class="list_detail" *ngIf="active">
+            Wir werden zu viert grillen und dabei etwas trinken. Es sollte kein Saufgelage werden, wenn ihr dies berücksichtigen könntet, wäre ich euch sehr Verbunden.
+            <div class="list_detail_info">
+              <p><b>Start:</b> 20:00 Uhr</p>
+            </div>
+          </div>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-12 dashboard_list">
           <h4>Vergangene Veranstaltungen</h4>
           <ul class="list-group list-group-horizontal-sm">
             <li class="list-group-item">Veranstaltung 1</li>

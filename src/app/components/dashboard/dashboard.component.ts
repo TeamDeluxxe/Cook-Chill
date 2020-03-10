@@ -14,4 +14,8 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
   }
 
+    active: boolean = false;
+    activeEvent() {
+      this.active = !this.active;
+    }
 }
