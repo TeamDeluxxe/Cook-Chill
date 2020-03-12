@@ -13,15 +13,19 @@ export class UsersService {
 
   profile: Observable<ProfileOverview[]>;
 
-  constructor(private db: AngularFirestore, private authService: AuthService) {
-    this.profile = db.collection<ProfileOverview>('foo').valueChanges();
+  constructor(private db: AngularFirestore) {
+    this.profile = db.collection<ProfileOverview>('/profile').valueChanges({idField: 'id'});
   }
 
   async save(profile: ProfileOverview) {
-    await this.db.collection('/users').add({
-        // firstName: profile.firstName,
-        allergies: profile.allergies
+    try {
+      await this.db.collection('/profile').add({
+        firstName: profile.firstName,
       });
+      console.log('Klappt');
+    } catch (e) {
+      console.log('Fehler');
+    }
   }
 
 }

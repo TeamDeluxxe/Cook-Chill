@@ -1,10 +1,11 @@
+<h1>Profil</h1>
 <!--Form Input-->
-<form #form>
+<form class="col-md-9 ml-sm-auto col-lg-10 px-4" #form>
   <!--  Vorname-->
   <div class="form-group">
-    <div class="col-md-8">
+    <div class="col-md-8 offset-md-2 col-sm-2">
       <details>
-      <summary><h6>Vorname:</h6></summary>
+      <summary>Vorname:</summary>
         <input class="input-group-sm" [(ngModel)]="profile.firstName" required minlength="5" name="allergies"
           placeholder="Vorname"
           type="text"
@@ -12,77 +13,85 @@
       </details>
     </div>
   </div>
-  <!--  Nachname-->
-  <div class="form-group">
-    <div class="col-md-8">
-      <details>
-      <summary><h6>Name:</h6></summary>
-      <input [(ngModel)]="profile.surname" required minlength="5" name="allergies"
-             placeholder="Nachname"
-             type="text"
-             class="form-control">
-      </details>
-    </div>
-  </div>
-  <!--  Wohnort-->
-  <div class="form-group">
-    <div class="col-md-8">
-      <summary><h6>Wohnort:</h6></summary>
-      <input [(ngModel)]="profile.city" required minlength="5" name="allergies"
-             placeholder="Wohnort"
-             type="text"
-             class="form-control">
-    </div>
-  </div>
-  <!--  Alter-->
-  <div class="form-group">
-    <summary><h6>Alter:</h6></summary>
-    <div class="col-md-8">
-      <input [(ngModel)]="profile.age" required minlength="5" name="allergies"
-             placeholder="Alter"
-             type="text"
-             class="form-control">
-    </div>
-  </div>
-  <!--  Interessen-->
-  <div class="form-group">
-    <div class="col-md-8">
-      <summary><h6>Interessen:</h6></summary>
-      <input [(ngModel)]="profile.interests" required minlength="5" name="allergies"
-             placeholder="Interessen"
-             type="text"
-             class="form-control">
-    </div>
-  </div>
-  <!--  Absichten-->
-  <div class="form-group">
-    <div class="col-md-8">
-      <summary><h6>Absichten:</h6></summary>
-      <input [(ngModel)]="profile.intentions" required minlength="5" name="allergies"
-             placeholder="Absichten"
-             type="text"
-             class="form-control">
-    </div>
-  </div>
-  <!--  Bild-->
-  <div class="form-group">
-    <div class="col-md-8">
-      <summary><h6>Bild:</h6></summary>
-      <input [(ngModel)]="profile.image" required minlength="5" name="allergies"
-             placeholder="Bild"
-             type="text"
-             class="form-control">
-    </div>
-  </div>
+<!--  &lt;!&ndash;  Nachname&ndash;&gt;-->
+<!--  <div class="form-group">-->
+<!--    <div class="col-md-8 offset-md-2 col-sm-2">-->
+<!--      <details>-->
+<!--      <summary>Name:</summary>-->
+<!--      <input [(ngModel)]="profile.surname" required minlength="5" name="allergies"-->
+<!--             placeholder="Nachname"-->
+<!--             type="text"-->
+<!--             class="form-control">-->
+<!--      </details>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  &lt;!&ndash;  Wohnort&ndash;&gt;-->
+<!--  <div class="form-group">-->
+<!--    <div class="col-md-8 offset-md-2 col-sm-2">-->
+<!--      <details>-->
+<!--      <summary>Wohnort:</summary>-->
+<!--      <input [(ngModel)]="profile.city" required minlength="5" name="allergies"-->
+<!--             placeholder="Wohnort"-->
+<!--             type="text"-->
+<!--             class="form-control">-->
+<!--      </details>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  &lt;!&ndash;  Alter&ndash;&gt;-->
+<!--  <div class="form-group">-->
+<!--    <div class="col-md-8 offset-md-2 col-sm-2">-->
+<!--      <details>-->
+<!--      <summary>Alter:</summary>-->
+<!--      <input [(ngModel)]="profile.age" required minlength="5" name="allergies"-->
+<!--             placeholder="Alter"-->
+<!--             type="text"-->
+<!--             class="form-control">-->
+<!--      </details>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  &lt;!&ndash;  Interessen&ndash;&gt;-->
+<!--  <div class="form-group">-->
+<!--    <div class="col-md-8 offset-md-2 col-sm-2">-->
+<!--      <details>-->
+<!--      <summary>Interessen:</summary>-->
+<!--      <input [(ngModel)]="profile.interests" required minlength="5" name="allergies"-->
+<!--             placeholder="Interessen"-->
+<!--             type="text"-->
+<!--             class="form-control">-->
+<!--      </details>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  &lt;!&ndash;  Absichten&ndash;&gt;-->
+<!--  <div class="form-group">-->
+<!--    <div class="col-md-8 offset-md-2 col-sm-2">-->
+<!--      <details>-->
+<!--      <summary>Absichten:</summary>-->
+<!--      <input [(ngModel)]="profile.intentions" required minlength="5" name="allergies"-->
+<!--             placeholder="Absichten"-->
+<!--             type="text"-->
+<!--             class="form-control">-->
+<!--      </details>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  &lt;!&ndash;  Bild&ndash;&gt;-->
+<!--  <div class="form-group">-->
+<!--    <div class="col-md-8 offset-md-2 col-sm-2">-->
+<!--      <details>-->
+<!--      <summary>Bild:</summary>-->
+<!--      <input [(ngModel)]="profile.image" required minlength="5" name="allergies"-->
+<!--             placeholder="Bild"-->
+<!--             type="text"-->
+<!--             class="form-control">-->
+<!--      </details>-->
+<!--    </div>-->
+<!--  </div>-->
 
-  <div class="col-md-8">
-    <button (click)="form.checkValidity()?save():1">
+  <div class="col-md-8 offset-md-2 col-sm-2">
+    <button (click)="form.checkValidity()?save():1" name="submit" type="submit" class="btn btn-primary">
       Submit
     </button>
   </div>
 </form>
-
-<p *ngFor="let pro of profiles | async">{{pro.allergies}}</p>
 
 
 
