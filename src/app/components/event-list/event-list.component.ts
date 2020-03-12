@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Event} from '../../models/Event';
 import {FormControl} from "@angular/forms";
+import {formatSize} from "@angular-devkit/build-angular/src/angular-cli-files/utilities/stats";
 @Component({
   selector: 'app-event-list',
   templateUrl: './event-list.component.html',
@@ -11,6 +12,8 @@ export class EventListComponent implements OnInit {
   eventList: Array<Event>;
   filteredEventList: Array<Event>;
   filterGericht = new FormControl('');
+  filterKategorie = new FormControl('');
+
 
   constructor() { }
 
@@ -33,7 +36,7 @@ export class EventListComponent implements OnInit {
     this.filteredEventList = this.eventList.slice();
 
     if(this.filterGericht.value !== ''){
-      
+
       // Filterung auf einen passenden Textteil (egal ob GROß oder kleinschreibung)
       this.filteredEventList = this.filteredEventList.filter(ev => ev.meal.toLowerCase().indexOf( this.filterGericht.value.toString().toLowerCase()) > -1 );
     }

@@ -19,10 +19,13 @@
       <tr>
         <th scope="col"></th>
         <th scope="col"></th>
-        <th scope="col"></th>
+        <th><input type="text"[formControl]="filterKategorie" (ngModelChange)="doFilter()"></th>
         <th scope="col"></th>
         <th scope="col"></th>
         <th><input type="text" [formControl]="filterGericht" (ngModelChange)="doFilter()"></th>
+        <th scope="col"></th>
+        
+
       </tr>
       </thead>
 
