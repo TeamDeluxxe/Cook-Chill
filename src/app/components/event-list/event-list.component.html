@@ -1,5 +1,10 @@
  <app-sidebar></app-sidebar>
-  <div class="offset-2">
+
+
+ <div class="container-fluid content">
+   <div class="row">
+     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+       <div class="inner-adjust">
 
     <table class="table">
       <thead>
@@ -11,9 +16,18 @@
         <th scope="col">Teilnehmeranzahl</th>
         <th scope="col">Gericht</th>
       </tr>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th><input type="text" [formControl]="filterGericht" (ngModelChange)="doFilter()"></th>
+      </tr>
       </thead>
+
       <tbody>
-      <tr *ngFor="let cookEvent of eventList">
+      <tr *ngFor="let cookEvent of filteredEventList">
         <td>{{cookEvent.name}}</td>
         <td>{{cookEvent.allergies}}</td>
         <td>{{cookEvent.category}}</td>
@@ -23,4 +37,8 @@
       </tr>
       </tbody>
     </table>
+
+       </div>
+     </main>
   </div>
+ </div>
