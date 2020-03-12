@@ -1,7 +1,7 @@
 export class ProfileOverview {
 
   constructor(
-    public id?: string,
+    public uid?: string,
     public firstName?: string,
     public surname?: string,
     public allergies?: string,
