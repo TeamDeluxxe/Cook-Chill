@@ -7,13 +7,13 @@ import { SignUpComponent } from '../../components/sign-up/sign-up.component';
 import { DashboardComponent } from '../../components/dashboard/dashboard.component';
 import { ForgotPasswordComponent } from '../../components/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from '../../components/verify-email/verify-email.component';
+import {AgbComponent} from '../../components/agb/agb.component';
 
 // Import guard services
 import { AuthGuard } from '../guard/auth.guard';
 import { SecureInnerPagesGuard } from '../guard/secure-inner-pages.guard';
 import {CreateEventComponent} from '../../components/create-event/create-event.component';
 import {EventListComponent} from '../../components/event-list/event-list.component';
-import {AgbComponent} from '../../components/agb/agb.component';
 
 // Hier Routen
 // { path: 'name_eingeben', component: componentname, canActivate: [AuthGuard] }
