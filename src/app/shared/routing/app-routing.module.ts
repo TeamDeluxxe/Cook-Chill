@@ -12,9 +12,11 @@ import { VerifyEmailComponent } from '../../components/verify-email/verify-email
 import { AuthGuard } from '../guard/auth.guard';
 import { SecureInnerPagesGuard } from '../guard/secure-inner-pages.guard';
 import {CreateEventComponent} from '../../components/create-event/create-event.component';
-import {EventListComponent} from "../../components/event-list/event-list.component";
+import {EventListComponent} from '../../components/event-list/event-list.component';
+import {AgbComponent} from '../../components/agb/agb.component';
 
 // Hier Routen
+// { path: 'name_eingeben', component: componentname, canActivate: [AuthGuard] }
 const routes: Routes = [
   { path: '', redirectTo: '/sign-in', pathMatch: 'full'},
   { path: 'sign-in', component: SignInComponent, canActivate: [SecureInnerPagesGuard]},
@@ -23,7 +25,8 @@ const routes: Routes = [
   { path: 'forgot-password', component: ForgotPasswordComponent, canActivate: [SecureInnerPagesGuard] },
   { path: 'verify-email-address', component: VerifyEmailComponent, canActivate: [SecureInnerPagesGuard] },
   { path: 'create-event', component: CreateEventComponent, canActivate: [AuthGuard] },
-  { path: 'event-list', component: EventListComponent, canActivate: [AuthGuard] }
+  { path: 'event-list', component: EventListComponent, canActivate: [AuthGuard] },
+  { path: 'agb', component: AgbComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({
