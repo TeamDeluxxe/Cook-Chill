@@ -23,15 +23,22 @@ export class UsersService {
     });
   }
 
+
   async save(profile: ProfileOverview) {
     try {
       await this.db.collection('/profile').add({
         uid: this.userData,
         firstName: profile.firstName,
+        surname: profile.surname,
+        allergies: profile.allergies
+        // city: profile.city
+        // interests: profile.interests,
+        // intentions: profile.intentions,
+        // age: profile.age
       });
       console.log('Klappt');
     } catch (e) {
-      console.log(e);
+      console.log('Klappt nicht');
     }
   }
 

@@ -5,24 +5,47 @@
   <div class="form-group">
     <div class="col-md-8 offset-md-2 col-sm-2">
       <details>
-      <summary>Vorname:</summary>
-        <input class="input-group-sm" [(ngModel)]="profile.firstName" required minlength="5" name="allergies"
+      <summary>Vorname: </summary>
+        <input class="input-group-sm" [(ngModel)]="profile.firstName" required minlength="5" name="firstName"
           placeholder="Vorname"
           type="text"
           class="form-control">
-        <p>{{profile.firstName}}</p>
       </details>
     </div>
   </div>
-<!--  &lt;!&ndash;  Nachname&ndash;&gt;-->
+  <!--  Nachname-->
+  <div class="form-group">
+    <div class="col-md-8 offset-md-2 col-sm-2">
+      <details>
+      <summary>Name:</summary>
+      <input [(ngModel)]="profile.surname" required minlength="5" name="Surname"
+             placeholder="Nachname"
+             type="text"
+             class="form-control">
+      </details>
+    </div>
+  </div>
+  <!--  Allergien-->
+  <div class="form-group">
+    <div class="col-md-8 offset-md-2 col-sm-2">
+      <details>
+        <summary>allergies:</summary>
+        <input [(ngModel)]="profile.allergies" required minlength="5" name="allergies"
+               placeholder="allergies"
+               type="text"
+               class="form-control">
+      </details>
+    </div>
+  </div>
+<!--  &lt;!&ndash;  Allergien&ndash;&gt;-->
 <!--  <div class="form-group">-->
 <!--    <div class="col-md-8 offset-md-2 col-sm-2">-->
 <!--      <details>-->
-<!--      <summary>Name:</summary>-->
-<!--      <input [(ngModel)]="profile.surname" required minlength="5" name="allergies"-->
-<!--             placeholder="Nachname"-->
-<!--             type="text"-->
-<!--             class="form-control">-->
+<!--        <summary>Allergien:</summary>-->
+<!--        <input [(ngModel)]="profile.allergies" required minlength="5" name="allergies"-->
+<!--               placeholder="Allergien"-->
+<!--               type="text"-->
+<!--               class="form-control">-->
 <!--      </details>-->
 <!--    </div>-->
 <!--  </div>-->

@@ -9,7 +9,7 @@ export class ProfileOverview {
     public interests?: string,
     public intentions?: string,
     public image?: string,
-    public age?: number
+    public age?: string
 
   ) {
 

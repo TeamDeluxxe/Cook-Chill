@@ -21,10 +21,6 @@ export class ProfileOverviewComponent implements OnInit {
   ngOnInit() {
   }
 
-  get profiles(): Observable<ProfileOverview[]> {
-    return this.db.profile;
-  }
-
   save() {
     this.db.save(this.profile);
     this.profile = new ProfileOverview();
