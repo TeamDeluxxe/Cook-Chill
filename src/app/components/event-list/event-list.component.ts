@@ -13,6 +13,10 @@ export class EventListComponent implements OnInit {
   filteredEventList: Array<Event>;
   filterGericht = new FormControl('');
   filterKategorie = new FormControl('');
+  filterTeilnehmeranzahl = new FormControl('');
+  filterDatum = new FormControl('');
+  filterAllegiere = new FormControl('');
+  filterName = new FormControl('');
 
 
   constructor() { }
@@ -35,12 +39,12 @@ export class EventListComponent implements OnInit {
     //this.eventList[0].meal = this.filterGericht.value;
     this.filteredEventList = this.eventList.slice();
 
-    if(this.filterGericht.value !== ''){
+    if(this.filterGericht.value !== '') {
 
       // Filterung auf einen passenden Textteil (egal ob GROß oder kleinschreibung)
       this.filteredEventList = this.filteredEventList.filter(ev => ev.meal.toLowerCase().indexOf( this.filterGericht.value.toString().toLowerCase()) > -1 );
     }
 
-  }
+    }
 
 }

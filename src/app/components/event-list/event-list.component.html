@@ -17,14 +17,14 @@
         <th scope="col">Gericht</th>
       </tr>
       <tr>
-        <th scope="col"></th>
-        <th scope="col"></th>
+        <th><input type="text"[formControl]="filterName" (ngModelChange)="doFilter()"></th>
+        <th><input type="text"[formControl]="filterAllegiere" (ngModelChange)="doFilter()"></th>
         <th><input type="text"[formControl]="filterKategorie" (ngModelChange)="doFilter()"></th>
+        <th><input type="date"[formControl]="filterDatum" (ngModelChange)="doFilter()"></th>
+        <th><input type="number"[formControl]="filterTeilnehmeranzahl" (ngModelChange)="doFilter()"></th>
+        <th><input type="text"[formControl]="filterGericht" (ngModelChange)="doFilter()"></th>
         <th scope="col"></th>
-        <th scope="col"></th>
-        <th><input type="text" [formControl]="filterGericht" (ngModelChange)="doFilter()"></th>
-        <th scope="col"></th>
-        
+
 
       </tr>
       </thead>
