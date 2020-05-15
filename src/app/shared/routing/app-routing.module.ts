@@ -14,6 +14,7 @@ import { SecureInnerPagesGuard } from '../guard/secure-inner-pages.guard';
 import {CreateEventComponent} from '../../components/create-event/create-event.component';
 import {EventListComponent} from '../../components/event-list/event-list.component';
 import {AgbComponent} from '../../components/agb/agb.component';
+import {ImpressumComponent} from '../../components/impressum/impressum.component';
 
 // Hier Routen
 // { path: 'name_eingeben', component: componentname, canActivate: [AuthGuard] }
@@ -26,7 +27,9 @@ const routes: Routes = [
   { path: 'verify-email-address', component: VerifyEmailComponent, canActivate: [SecureInnerPagesGuard] },
   { path: 'create-event', component: CreateEventComponent, canActivate: [AuthGuard] },
   { path: 'event-list', component: EventListComponent, canActivate: [AuthGuard] },
-  { path: 'agb', component: AgbComponent, canActivate: [AuthGuard] }
+  { path: 'agb', component: AgbComponent, canActivate: [AuthGuard] },
+  { path: 'event-list', component: EventListComponent, canActivate: [AuthGuard] },
+  { path: 'impressum', component: ImpressumComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({
