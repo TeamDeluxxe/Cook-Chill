@@ -30,8 +30,9 @@ import {CreateEventComponent} from './components/create-event/create-event.compo
 import {SidebarModule} from 'ng-sidebar';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import {EventListComponent} from './components/event-list/event-list.component';
-import {AgbComponent} from './components/agb/agb.component';
-import { AccountSettingsComponent } from './components/account-settings/account-settings.component';
+import { AgbComponent } from './components/agb/agb.component';
+import { ImpressumComponent } from './components/impressum/impressum.component';
+import { DataPrivacyComponent } from './components/data-privacy/data-privacy.component';
 
 
 @NgModule({
@@ -49,8 +50,9 @@ import { AccountSettingsComponent } from './components/account-settings/account-
     FooterComponent,
     CreateEventComponent,
     EventListComponent,
-    AgbComponent,
-    AccountSettingsComponent
+    ImpressumComponent,
+    DataPrivacyComponent,
+    AgbComponent
   ],
   imports: [
     BrowserModule,
