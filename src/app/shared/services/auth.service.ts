@@ -28,7 +28,7 @@ export class AuthService {
         localStorage.setItem('user', null);
         JSON.parse(localStorage.getItem('user'));
       }
-    })
+    });
   }
 
   // Anmelden mit E-Mail / Passwort an
@@ -40,8 +40,8 @@ export class AuthService {
         });
         this.SetUserData(result.user);
       }).catch((error) => {
-        window.alert(error.message)
-      })
+        window.alert(error.message);
+      });
   }
 
   // Registrieren mit E-Mail / Passwort an
@@ -53,8 +53,8 @@ export class AuthService {
         this.SendVerificationMail();
         this.SetUserData(result.user);
       }).catch((error) => {
-        window.alert(error.message)
-      })
+        window.alert(error.message);
+      });
   }
 
   // E-Mail-Bestätigung senden, wenn sich ein neuer Benutzer registrieren
@@ -62,7 +62,7 @@ export class AuthService {
     return this.afAuth.auth.currentUser.sendEmailVerification()
       .then(() => {
         this.router.navigate(['verify-email-address']);
-      })
+      });
   }
 
   // Passwort zurücksetzen
@@ -71,8 +71,8 @@ export class AuthService {
       .then(() => {
         window.alert('Password reset email sent, check your inbox.');
       }).catch((error) => {
-        window.alert(error)
-      })
+        window.alert(error);
+      });
   }
 
   // Gibt true zurück, wenn der Benutzer angemeldet ist und die E-Mail-Adresse bestätigt wurde
@@ -92,8 +92,8 @@ export class AuthService {
         });
         this.SetUserData(result.user);
       }).catch((error) => {
-        window.alert(error)
-      })
+        window.alert(error);
+      });
   }
 
   /* Einrichten der Benutzerdaten bei der Anmeldung mit Benutzername / Passwort,
@@ -109,14 +109,13 @@ export class AuthService {
     };
     return userRef.set(userData, {
       merge: true
-    })
+    });
   }
 
   SignOut() {
     return this.afAuth.auth.signOut().then(() => {
       localStorage.removeItem('user');
       this.router.navigate(['sign-in']);
-    })
+    });
   }
-
 }
