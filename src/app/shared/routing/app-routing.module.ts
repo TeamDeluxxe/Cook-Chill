@@ -22,13 +22,13 @@ const routes: Routes = [
   { path: '', redirectTo: '/sign-in', pathMatch: 'full'},
   { path: 'sign-in', component: SignInComponent, canActivate: [SecureInnerPagesGuard]},
   { path: 'register-user', component: SignUpComponent, canActivate: [SecureInnerPagesGuard]},
-  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
-  { path: 'forgot-password', component: ForgotPasswordComponent, canActivate: [SecureInnerPagesGuard] },
-  { path: 'verify-email-address', component: VerifyEmailComponent, canActivate: [SecureInnerPagesGuard] },
-  { path: 'create-event', component: CreateEventComponent, canActivate: [AuthGuard] },
-  { path: 'event-list', component: EventListComponent, canActivate: [AuthGuard] },
-  { path: 'agb', component: AgbComponent, canActivate: [AuthGuard] },
-  { path: 'account-settings', component: AccountSettingsComponent, canActivate: [AuthGuard] }
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
+  { path: 'forgot-password', component: ForgotPasswordComponent, canActivate: [AuthGuard]},
+  { path: 'verify-email-address', component: VerifyEmailComponent, canActivate: [SecureInnerPagesGuard]},
+  { path: 'create-event', component: CreateEventComponent, canActivate: [AuthGuard]},
+  { path: 'event-list', component: EventListComponent, canActivate: [AuthGuard]},
+  { path: 'agb', component: AgbComponent, canActivate: [AuthGuard]},
+  { path: 'account-settings', component: AccountSettingsComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({

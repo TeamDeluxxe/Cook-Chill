@@ -5,12 +5,18 @@
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
       <div class="inner-adjust">
         <div class="pt-3 pb-2 mb-3 border-bottom">
-
-          <div style="text-align:center"><p><strong>Einstellung</strong></p></div>
+          <div style="text-align:center"><p><strong>Konto Einstellungen</strong></p></div>
         </div>
         <br>
-        <p><strong>Password Wiederherstellen</strong></p>
+        <div class="delete-account">
+          <h3>Auf "Konto löschen" klicken, um das Konto endgültig und vollständig zu entfernen.</h3>
+          <span class="nav-link active" (click)="authService.SignOut()">Konto löschen</span>
+        </div>
       </div>
+      <h3>Falls du deinen Namen oder die E-Mail ändern möchtest, schreib unsern Support gerne an.
+        Das gilt auch bei anderen Problemen, wir sind immer für dich da.</h3>
+      <a href="mailto:deluxxteam9@gmail.com"><span class="nav-link active">Support</span></a>
     </main>
   </div>
 </div>
+
