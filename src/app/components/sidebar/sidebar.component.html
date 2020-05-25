@@ -4,21 +4,21 @@
     <nav class="col-md-3 d-xs-block bg-white sidebar">
       <div class="sidebar-sticky">
         <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link active"><i class="material-icons">settings</i></a>
+          <li class="nav-item bg-light">
+            <a class="nav-link active"><i class="material-icons" routerLink="/account-settings">settings-outline</i></a>
           </li>
           <li class="nav-item bg-light">
             <a class="nav-link active" routerLink="/dashboard">Profil</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item bg-light">
             <a class="nav-link active" routerLink="/create-event"><i class="material-icons"></i>Veranstaltung erstellen</a>
           </li>
           <li class="nav-item bg-light">
             <a class="nav-link active" routerLink="/event-list"><i class="material-icons"></i>Veranstaltungsliste</a>
           </li>
           <!-- Aufruf von SignOut () Api von AuthService -->
-          <li class="nav-item">
-            <a class="nav-link" (click)="authService.SignOut()">Ausloggen</a>
+          <li class="nav-item bg-light">
+            <a class="nav-link active" (click)="authService.SignOut()">Ausloggen</a>
           </li>
         </ul>
       </div>
