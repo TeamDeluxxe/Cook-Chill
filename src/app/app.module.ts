@@ -31,9 +31,9 @@ import {SidebarModule} from 'ng-sidebar';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import {EventListComponent} from './components/event-list/event-list.component';
 import { AgbComponent } from './components/agb/agb.component';
-import {EventListComponent} from './components/event-list/event-list.component';
 import { ImpressumComponent } from './components/impressum/impressum.component';
 import { DataPrivacyComponent } from './components/data-privacy/data-privacy.component';
+import { AccountSettingsComponent } from './components/account-settings/account-settings.component';
 
 
 @NgModule({
@@ -54,7 +54,8 @@ import { DataPrivacyComponent } from './components/data-privacy/data-privacy.com
     ImpressumComponent,
     DataPrivacyComponent,
     EventListComponent,
-    AgbComponent
+    AgbComponent,
+    AccountSettingsComponent
   ],
   imports: [
     BrowserModule,

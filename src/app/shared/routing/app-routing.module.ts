@@ -16,6 +16,7 @@ import {EventListComponent} from '../../components/event-list/event-list.compone
 import {AgbComponent} from '../../components/agb/agb.component';
 import {ImpressumComponent} from '../../components/impressum/impressum.component';
 import {DataPrivacyComponent} from '../../components/data-privacy/data-privacy.component';
+import {AccountSettingsComponent} from '../../components/account-settings/account-settings.component';
 
 // Hier Routen
 // { path: 'name_eingeben', component: componentname, canActivate: [AuthGuard] }
@@ -31,7 +32,8 @@ const routes: Routes = [
   { path: 'agb', component: AgbComponent, canActivate: [AuthGuard] },
   { path: 'datenschutz', component: DataPrivacyComponent, canActivate: [AuthGuard] },
   { path: 'event-list', component: EventListComponent, canActivate: [AuthGuard] },
-  { path: 'impressum', component: ImpressumComponent, canActivate: [AuthGuard] }
+  { path: 'impressum', component: ImpressumComponent, canActivate: [AuthGuard] },
+  { path: 'settings', component: AccountSettingsComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({
