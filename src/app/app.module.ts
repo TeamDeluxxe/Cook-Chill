@@ -50,7 +50,6 @@ import { DataPrivacyComponent } from './components/data-privacy/data-privacy.com
     NextEventsComponent,
     FooterComponent,
     CreateEventComponent,
-    EventListComponent,
     ImpressumComponent,
     DataPrivacyComponent,
     EventListComponent,
