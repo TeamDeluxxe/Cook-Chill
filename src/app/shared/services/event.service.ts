@@ -15,7 +15,7 @@ export class EventService {
   userData: any;
 
   constructor(private db: AngularFirestore, private authService: AuthService, private afAuth: AngularFireAuth) {
-    this.event = db.collection<Event>('/event_list').valueChanges({idField: 'id'});
+    this.event = db.collection<Event>('/event').valueChanges({idField: 'id'});
     this.afAuth.authState.subscribe(user => {
       if (user) {
         this.userData = user.uid;
@@ -26,18 +26,19 @@ export class EventService {
 
   async save(event: Event) {
     try {
-      await this.db.collection('/event_list').add({
+      await this.db.collection('/event').add({
         name: event.name,
         allergies: event.allergies,
         category: event.category,
-        eventDate: event.eventDate,
+        eventDate: event.date,
         meal: event.meal,
         price: event.price,
+        time: event.time,
         shop: event.shop,
         visitNumber: event.visitNumber,
         visiter: event.visiter,
-        whoCooks: event.whoCooks,
-        whoShops: event.whoShops,
+        registration_period: event.registrationperiod,
+        confirmation_date: event.confirmationdate
       });
       console.log('Klappt');
     } catch (e) {

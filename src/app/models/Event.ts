@@ -1,13 +1,17 @@
-export class  Event{
+export class  Event {
   name: string;
   allergies: string;
   category: string;
-  eventDate: Date;
+  date: Date;
+  time: string;
   meal: string;
   price: number;
   shop: boolean;
   visitNumber: number;
   visiter: number;
+  addressee: string;
   whoCooks: string;
   whoShops: string;
+  registrationperiod: Date;
+  confirmationdate: Date;
 }
