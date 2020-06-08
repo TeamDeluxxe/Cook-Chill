@@ -20,6 +20,6 @@ export class CreateEventComponent implements OnInit {
   }
   save() {
     this.db.save(this.event);
-    this.event = new Event();
+    // this.event = new Event();
   }
 }

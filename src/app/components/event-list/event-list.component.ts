@@ -31,7 +31,7 @@ export class EventListComponent implements OnInit {
       name: 'Veranstaltung1',
       allergies: 'Tomate',
       category: 'Kuchen',
-      eventDate: new Date(2020, 11, 24),
+      date: new Date(2020, 11, 24),
       meal: 'StaeK mit kartoffel',
       price: 10,
       shop: true,
@@ -45,7 +45,7 @@ export class EventListComponent implements OnInit {
       name: 'Veranstaltung2',
       allergies: 'Gurke',
       category: 'Vegan',
-      eventDate: new Date(2019, 10, 14),
+      date: new Date(2019, 10, 14),
       meal: 'Pizza',
       price: 15,
       shop: false,
@@ -59,7 +59,7 @@ export class EventListComponent implements OnInit {
       name: 'Veranstaltung3',
       allergies: 'Nuss',
       category: 'Süßigkeiten',
-      eventDate: new Date(2020, 7, 12),
+      date: new Date(2020, 7, 12),
       meal: 'Chips',
       price: 7,
       shop: true,
@@ -108,7 +108,7 @@ export class EventListComponent implements OnInit {
 
 
 
-      this.filteredEventList = this.filteredEventList.filter(ev => this.asISO(ev.eventDate).toLowerCase().indexOf(this.filterDatum.value.toString().toLowerCase()) > -1);
+      this.filteredEventList = this.filteredEventList.filter(ev => this.asISO(ev.date).toLowerCase().indexOf(this.filterDatum.value.toString().toLowerCase()) > -1);
     }
 
   }
