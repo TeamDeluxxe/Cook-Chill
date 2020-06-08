@@ -113,13 +113,13 @@ export class EventListComponent implements OnInit {
 
   }
   asISO(dateValue: Date): string {
-    return dateValue != null //prüfen wir ab dass wir ein wert haben
-      ? dateValue.getFullYear().toString() + //hol aus dem datum das jahr aus
-      '-' + //fügt ein bindstrich ein
-      (dateValue.getMonth() + 1).toString().padStart(2, '0') + //hol den monat als nummer und mit padstart füllt den text mit 0 aus damit der text 2 zahle hat
-      '-' + //fügt ein bindstrich ein
-      dateValue.getDate().toString().padStart(2, '0')  //hold den tag als nummer und mit padstart füllt den text mit 0 aus damit der text dann 2 zahke hat
-      : ''; //leer text zzurück geben wenn datum wert null ist  //das ist ein code ohne if zu benutzen
+    return dateValue != null // prüfen wir ab dass wir ein wert haben
+      ? dateValue.getFullYear().toString() + // hol aus dem datum das jahr aus
+      '-' + // fügt ein bindstrich ein
+      (dateValue.getMonth() + 1).toString().padStart(2, '0') + // hol den monat als nummer und mit padstart füllt den text mit 0 aus damit der text 2 zahle hat
+      '-' + // fügt ein bindstrich ein
+      dateValue.getDate().toString().padStart(2, '0')  // hold den tag als nummer und mit padstart füllt den text mit 0 aus damit der text dann 2 zahke hat
+      : ''; // leer text zzurück geben wenn datum wert null ist  //das ist ein code ohne if zu benutzen
 
     }
 
