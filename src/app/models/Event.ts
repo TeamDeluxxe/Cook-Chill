@@ -1,17 +1,21 @@
 export class  Event {
-  name: string;
-  allergies: string;
-  category: string;
-  date: Date;
-  time: string;
-  meal: string;
-  price: number;
-  shop: boolean;
-  visitNumber: number;
-  visiter: number;
-  addressee: string;
-  whoCooks: string;
-  whoShops: string;
-  registrationperiod: Date;
-  confirmationdate: Date;
+  constructor(
+    public uid?: string,
+    public name?: string,
+    public allergies?: string,
+    public category?: string,
+    public date?: Date,
+    public time?: string,
+    public meal?: string,
+    public price?: number,
+    public shop?: boolean,
+    public visitNumber?: number,
+    public visiter?: number,
+    public addressee?: string,
+    public whoCooks?: string,
+    public whoShops?: string,
+    public registrationperiod?: Date,
+    public confirmationdate?: Date,
+  ) {
+  }
 }
