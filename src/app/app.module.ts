@@ -27,6 +27,10 @@ import { OwnEventsComponent } from './components/own-events/own-events.component
 import { NextEventsComponent } from './components/next-events/next-events.component';
 import { ProfileOverviewComponent } from './components/profile-overview/profile-overview.component';
 import { UsersService } from './shared/services/users.service';
+import {Sidebar} from 'ng-sidebar';
+import {FooterComponent} from './components/footer/footer.component';
+import {SidebarComponent} from './components/sidebar/sidebar.component';
+import {CommonModule} from '@angular/common';
 
 
 @NgModule({
@@ -40,6 +44,8 @@ import { UsersService } from './shared/services/users.service';
     OwnEventsComponent,
     NextEventsComponent,
     ProfileOverviewComponent,
+    SidebarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
