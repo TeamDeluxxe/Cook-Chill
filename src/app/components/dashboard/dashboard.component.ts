@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from '../../shared/services/auth.service';
 import {UsersService} from '../../shared/services/users.service';
-import {NgForm} from '@angular/forms';
 import {ProfileOverview} from '../../models/Profile-Overview';
-import {Observable} from 'rxjs';
+import {AngularFirestore} from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-dashboard',
@@ -17,7 +16,8 @@ export class DashboardComponent implements OnInit {
 
   constructor(
     public authService: AuthService,
-    private userService: UsersService
+    private userService: UsersService,
+    private db: AngularFirestore
   ) {
     this.users = new ProfileOverview();
   }
@@ -25,4 +25,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
   }
 
+  getProfile() {
+    return this.db.collection('profile').snapshotChanges();
+  }
 }

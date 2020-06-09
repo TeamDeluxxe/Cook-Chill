@@ -1,5 +1,5 @@
-import {AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} from '@angular/fire/firestore';
-import {ObjectUnsubscribedError, Observable} from 'rxjs';
+import {AngularFirestore} from '@angular/fire/firestore';
+import {Observable} from 'rxjs';
 import {ProfileOverview} from '../../models/Profile-Overview';
 import {Injectable} from '@angular/core';
 import {AngularFireAuth} from '@angular/fire/auth';
@@ -13,8 +13,6 @@ export class UsersService {
 
   profile: Observable<ProfileOverview[]>;
 
-  // profileCollection: AngularFirestoreCollection<ProfileOverview>;
-  // profile: Observable<ProfileOverview[]>;
   userData: any;
 
   constructor(private db: AngularFirestore, private authService: AuthService, private afAuth: AngularFireAuth) {
@@ -25,21 +23,6 @@ export class UsersService {
       }
     });
   }
-
-  // constructor(private db: AngularFirestore, private authService: AuthService, private afAuth: AngularFireAuth) {
-  //   this.profileCollection = this.db.collection('Profile');
-  //   this.profile = this.profileCollection.snapshotChanges().map(
-  //     changes => {
-  //       return changes.map(
-  //         a => {
-  //           const data = a.payload.doc.data() as ProfileOverview;
-  //           data.id = a.payload.doc.id;
-  //           return data;
-  //         });
-  //     });
-  //
-  //   )
-  // }
 
 
    save(profile: ProfileOverview) {

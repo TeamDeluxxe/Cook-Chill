@@ -1,9 +1,11 @@
-<h1>Profil</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
 <!--Form Input-->
-<form class="col-md-9 ml-sm-auto col-lg-10 px-4" #form>
+<form #form>
 
-  <!--  Vorname-->
-  <div>
+
+    <!--  Vorname-->
   <div class="form-group">
     <div class="col-md-8 offset-md-2 col-sm-2">
       <details>
@@ -93,38 +95,16 @@
       </details>
     </div>
   </div>
-  </div>
+
   <div class="col-md-8 offset-md-2 col-sm-2">
     <button (click)="form.checkValidity()?save():1" name="submit" type="submit" class="btn btn-primary">
-      Submit
+      Daten anzeigen
     </button>
   </div>
 </form>
+  </div>
 
-<!--  <table>-->
-<!--    <thead>-->
-<!--      <th>Vorname</th>-->
-<!--      <th>Nachname</th>-->
-<!--      <th>Allergien</th>-->
-<!--      <th>Wohnort</th>-->
-<!--      <th>Alter</th>-->
-<!--      <th>Interessen</th>-->
-<!--      <th>Absichten</th>-->
-<!--    </thead>-->
-<!--    <tbody>-->
-<!--      <tr *ngFor="let p of list">-->
-<!--        <td>{{p.firstName}}</td>-->
-<!--        </td>-->
-<!--        <td>{{p.allergies}}</td>-->
-<!--        <td>{{p.city}}</td>-->
-<!--        <td>{{p.age}}</td>-->
-<!--        <td>{{p.interests}}</td>-->
-<!--        <td>{{p.intentions}}</td>-->
-<!--      </tr>-->
-<!--    </tbody>-->
-<!--</table>-->
-
-
+<div class="col-md-6">
 <table>
   <tr *ngFor="let p of list">
     <td *ngIf="p.uid == db.userData">{{p.firstName}}</td>
@@ -134,11 +114,14 @@
     <td>{{p.age}}</td>
     <td>{{p.interests}}</td>
     <td>{{p.intentions}}</td>
-
-    <button (click)="delete(p)">
+    <td>  <button (click)="delete(p)">
       <i class="material-icons">
         delete
       </i>
-    </button>
+    </button></td>
   </tr>
 </table>
+
+</div>
+  </div>
+</div>

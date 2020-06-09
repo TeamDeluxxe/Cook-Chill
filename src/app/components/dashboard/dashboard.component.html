@@ -2,15 +2,8 @@
 <div class="container-fluid">
   <div class="row">
 
-<!--    Ausloggen-->
-          <li class="nav-item">
-            <a class="nav-link" (click)="authService.SignOut()">
-              <button type="button" class="btn btn-primary fas fa-sign-out-alt">Ausloggen</button>
-            </a>
-
-
     <!-- Main -->
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <main role="main" class="col-md-12 ml-sm-auto col-lg-10 px-4">
       <div class="inner-adjust">
 
         <form #form>
@@ -18,17 +11,7 @@
           <h1 class="h2">Profilübersicht</h1>
         </div>
           <app-profile-overview></app-profile-overview>
-        <!-- Show user data when logged in -->
-        <div class="row" *ngIf="authService.userData as user">
-          <div class="col-md-12">
-            <div class="media">
-              <div class="media-body">
 
-
-              </div>
-            </div>
-          </div>
-        </div>
         </form>
         <div class="col-md-8">
           <h4>Eigene Veranstaltungen</h4>
