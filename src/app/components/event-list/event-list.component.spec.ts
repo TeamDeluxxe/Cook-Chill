@@ -10,7 +10,7 @@ describe('EventListComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ EventListComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

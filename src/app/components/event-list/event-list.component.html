@@ -1,47 +1,46 @@
- <app-sidebar></app-sidebar>
+<app-sidebar></app-sidebar>
 
 
- <div class="container-fluid content">
-   <div class="row">
-     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-       <div class="inner-adjust">
+<div class="table-wrapper">
+  <div class="row">
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="inner-adjust">
 
-    <table class="table">
-      <thead>
-      <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Allegiere</th>
-        <th scope="col">Kategorie</th>
-        <th scope="col">Datum</th>
-        <th scope="col">Teilnehmeranzahl</th>
-        <th scope="col">Gericht</th>
-      </tr>
-      <tr>
-        <th><input type="text"[formControl]="filterName" (ngModelChange)="doFilter()"></th>
-        <th><input type="text"[formControl]="filterAllegiere" (ngModelChange)="doFilter()"></th>
-        <th><input type="text"[formControl]="filterKategorie" (ngModelChange)="doFilter()"></th>
-        <th><input type="date"[formControl]="filterDatum" (ngModelChange)="doFilter()"></th>
-        <th><input type="number"[formControl]="filterTeilnehmeranzahl" (ngModelChange)="doFilter()"></th>
-        <th><input type="text"[formControl]="filterGericht" (ngModelChange)="doFilter()"></th>
-        <th scope="col"></th>
+        <table class="fl-table">
+          <thead>
+          <tr>
+            <th scope="col">Veranstaltungsname</th>
+            <th scope="col">Allergie</th>
+            <th scope="col">Kategorie</th>
+            <th scope="col">Datum</th>
+            <th scope="col">Teilnehmeranzahl</th>
+            <th scope="col">Gericht</th>
+          </tr>
+          <tr>
+            <th><input type="text" [formControl]="filterVeranstaltungsname" (ngModelChange)="doFilter()"></th>
+            <th><input type="text" [formControl]="filterAllergie" (ngModelChange)="doFilter()"></th>
+            <th><input type="text" [formControl]="filterKategorie" (ngModelChange)="doFilter()"></th>
+            <th><input type="date" [formControl]="filterDatum" (ngModelChange)="doFilter()"></th>
+            <th><input type="number" [formControl]="filterTeilnehmeranzahl" (ngModelChange)="doFilter()"></th>
+            <th><input type="text" [formControl]="filterGericht" (ngModelChange)="doFilter()"></th>
 
 
-      </tr>
-      </thead>
+          </tr>
+          </thead>
 
-      <tbody>
-      <tr *ngFor="let cookEvent of filteredEventList">
-        <td>{{cookEvent.name}}</td>
-        <td>{{cookEvent.allergies}}</td>
-        <td>{{cookEvent.category}}</td>
-        <td>{{cookEvent.eventDate | date:'dd.MM.yy'}}</td>
-        <td>{{cookEvent.visiter}}</td>
-        <td>{{cookEvent.meal}}</td>
-      </tr>
-      </tbody>
-    </table>
+          <tbody>
+          <tr *ngFor="let cookEvent of filteredEventList">
+            <td>{{cookEvent.name}}</td>
+            <td>{{cookEvent.allergies}}</td>
+            <td>{{cookEvent.category}}</td>
+            <td>{{cookEvent.eventDate | date:'dd.MM.yy'}}</td>
+            <td>{{cookEvent.visiter}}</td>
+            <td>{{cookEvent.meal}}</td>
+          </tr>
+          </tbody>
+        </table>
 
-       </div>
-     </main>
+      </div>
+    </main>
   </div>
- </div>
+</div>
