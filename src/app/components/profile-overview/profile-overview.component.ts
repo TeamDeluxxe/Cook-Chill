@@ -7,6 +7,7 @@ import {AuthService} from '../../shared/services/auth.service';
 import {User} from '../../models/user';
 import {map} from 'rxjs/operators';
 import {AngularFirestore} from '@angular/fire/firestore';
+import {SidebarComponent} from '../sidebar/sidebar.component';
 
 @Component({
   selector: 'app-profile-overview',
