@@ -11,9 +11,15 @@ import { VerifyEmailComponent } from '../../components/verify-email/verify-email
 // Import guard services
 import { AuthGuard } from '../guard/auth.guard';
 import { SecureInnerPagesGuard } from '../guard/secure-inner-pages.guard';
-import {ProfileOverviewComponent} from '../../components/profile-overview/profile-overview.component';
+import {CreateEventComponent} from '../../components/create-event/create-event.component';
+import {EventListComponent} from '../../components/event-list/event-list.component';
+import {AgbComponent} from '../../components/agb/agb.component';
+import {ImpressumComponent} from '../../components/impressum/impressum.component';
+import {DataPrivacyComponent} from '../../components/data-privacy/data-privacy.component';
+import {AccountSettingsComponent} from '../../components/account-settings/account-settings.component';
 
 // Hier Routen
+// { path: 'name_eingeben', component: componentname, canActivate: [AuthGuard] }
 const routes: Routes = [
   { path: '', redirectTo: '/sign-in', pathMatch: 'full'},
   { path: 'sign-in', component: SignInComponent, canActivate: [SecureInnerPagesGuard]},
@@ -21,7 +27,13 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'forgot-password', component: ForgotPasswordComponent, canActivate: [SecureInnerPagesGuard] },
   { path: 'verify-email-address', component: VerifyEmailComponent, canActivate: [SecureInnerPagesGuard] },
-  { path: 'profile', component: ProfileOverviewComponent, canActivate: [AuthGuard]}
+  { path: 'create-event', component: CreateEventComponent, canActivate: [AuthGuard] },
+  { path: 'event-list', component: EventListComponent, canActivate: [AuthGuard] },
+  { path: 'agb', component: AgbComponent, canActivate: [AuthGuard] },
+  { path: 'datenschutz', component: DataPrivacyComponent, canActivate: [AuthGuard] },
+  { path: 'event-list', component: EventListComponent, canActivate: [AuthGuard] },
+  { path: 'impressum', component: ImpressumComponent, canActivate: [AuthGuard] },
+  { path: 'settings', component: AccountSettingsComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({

@@ -25,12 +25,16 @@ import { environment } from '../environments/environment';
 import { AuthService } from './shared/services/auth.service';
 import { OwnEventsComponent } from './components/own-events/own-events.component';
 import { NextEventsComponent } from './components/next-events/next-events.component';
-import { ProfileOverviewComponent } from './components/profile-overview/profile-overview.component';
-import { UsersService } from './shared/services/users.service';
-import {Sidebar, SidebarModule} from 'ng-sidebar';
-import {FooterComponent} from './components/footer/footer.component';
-import {SidebarComponent} from './components/sidebar/sidebar.component';
-import {CommonModule} from '@angular/common';
+import { FooterComponent } from './components/footer/footer.component';
+import {CreateEventComponent} from './components/create-event/create-event.component';
+import {SidebarModule} from 'ng-sidebar';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import {EventListComponent} from './components/event-list/event-list.component';
+import { AgbComponent } from './components/agb/agb.component';
+import { ImpressumComponent } from './components/impressum/impressum.component';
+import { DataPrivacyComponent } from './components/data-privacy/data-privacy.component';
+import { AccountSettingsComponent } from './components/account-settings/account-settings.component';
+import {ProfileOverviewComponent} from './components/profile-overview/profile-overview.component';
 
 
 @NgModule({
@@ -43,9 +47,16 @@ import {CommonModule} from '@angular/common';
     VerifyEmailComponent,
     OwnEventsComponent,
     NextEventsComponent,
-    ProfileOverviewComponent,
     SidebarComponent,
-    FooterComponent
+    NextEventsComponent,
+    FooterComponent,
+    CreateEventComponent,
+    ImpressumComponent,
+    DataPrivacyComponent,
+    EventListComponent,
+    AgbComponent,
+    AccountSettingsComponent,
+    ProfileOverviewComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +66,7 @@ import {CommonModule} from '@angular/common';
     AngularFirestoreModule,
     ReactiveFormsModule,
     FormsModule,
-    SidebarModule
+    SidebarModule.forRoot()
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
