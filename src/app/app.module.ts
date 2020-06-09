@@ -25,15 +25,8 @@ import { environment } from '../environments/environment';
 import { AuthService } from './shared/services/auth.service';
 import { OwnEventsComponent } from './components/own-events/own-events.component';
 import { NextEventsComponent } from './components/next-events/next-events.component';
-import { FooterComponent } from './components/footer/footer.component';
-import {CreateEventComponent} from './components/create-event/create-event.component';
-import {SidebarModule} from 'ng-sidebar';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
-import {EventListComponent} from './components/event-list/event-list.component';
-import { AgbComponent } from './components/agb/agb.component';
-import { ImpressumComponent } from './components/impressum/impressum.component';
-import { DataPrivacyComponent } from './components/data-privacy/data-privacy.component';
-import { AccountSettingsComponent } from './components/account-settings/account-settings.component';
+import { ProfileOverviewComponent } from './components/profile-overview/profile-overview.component';
+import { UsersService } from './shared/services/users.service';
 
 
 @NgModule({
@@ -46,15 +39,7 @@ import { AccountSettingsComponent } from './components/account-settings/account-
     VerifyEmailComponent,
     OwnEventsComponent,
     NextEventsComponent,
-    SidebarComponent,
-    NextEventsComponent,
-    FooterComponent,
-    CreateEventComponent,
-    ImpressumComponent,
-    DataPrivacyComponent,
-    EventListComponent,
-    AgbComponent,
-    AccountSettingsComponent
+    ProfileOverviewComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,8 +48,7 @@ import { AccountSettingsComponent } from './components/account-settings/account-
     AngularFireAuthModule,
     AngularFirestoreModule,
     ReactiveFormsModule,
-    FormsModule,
-    SidebarModule.forRoot()
+    FormsModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

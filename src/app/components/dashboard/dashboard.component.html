@@ -1,27 +1,18 @@
 <!-- Sidebar navigation -->
-<app-sidebar></app-sidebar>
-<div class="container-fluid content">
+<div class="container-fluid">
   <div class="row">
+
     <!-- Main -->
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <main role="main" class="col-md-12 ml-sm-auto col-lg-10 px-4">
       <div class="inner-adjust">
 
+        <form #form>
         <div class="pt-3 pb-2 mb-3 border-bottom">
-          <h1>Profilübersicht</h1>
+          <h1 class="h2">Profilübersicht</h1>
         </div>
-        <!-- Show user data when logged in -->
-        <div class="row" *ngIf="authService.userData as user">
-          <div class="col-md-12">
-            <div class="media">
-              <div class="media-body">
-<!--                 <h1><strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h1>-->
-                <p>Name:</p>
-                <p>Email: <strong>{{user.email}}</strong></p>
-<!--                <p>Email verifiziert: <strong>{{user.emailVerified}}</strong></p>-->
-              </div>
-            </div>
-          </div>
-        </div>
+          <app-profile-overview></app-profile-overview>
+
+        </form>
         <div class="col-md-8">
           <h4>Eigene Veranstaltungen</h4>
           <ul class="list-group list-group-horizontal-sm">
@@ -51,3 +42,6 @@
 
   </div>
 </div>
+
+
+

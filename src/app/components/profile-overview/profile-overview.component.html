@@ -1,0 +1,127 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+<!--Form Input-->
+<form #form>
+
+
+    <!--  Vorname-->
+  <div class="form-group">
+    <div class="col-md-8 offset-md-2 col-sm-2">
+      <details>
+      <summary >Vorname: {{profile.firstName}}</summary>
+        <input class="input-group-sm" [(ngModel)]="profile.firstName" name="firstName"
+          placeholder="Vorname"
+          type="text"
+          class="form-control">
+      </details>
+    </div>
+  </div>
+
+  <!--  Nachname-->
+  <div class="form-group">
+    <div class="col-md-8 offset-md-2 col-sm-2">
+      <details>
+      <summary>Nachname:</summary>
+      <input [(ngModel)]="profile.surname" name="surname"
+             placeholder="Nachname"
+             type="text"
+             class="form-control">
+      </details>
+    </div>
+  </div>
+
+  <!--  Allergien-->
+  <div class="form-group">
+    <div class="col-md-8 offset-md-2 col-sm-2">
+      <details>
+        <summary>Allergien:</summary>
+        <input [(ngModel)]="profile.allergies" name="allergies"
+               placeholder="Allergien"
+               type="text"
+               class="form-control">
+      </details>
+    </div>
+  </div>
+
+  <!--  Wohnort-->
+  <div class="form-group">
+    <div class="col-md-8 offset-md-2 col-sm-2">
+      <details>
+      <summary>Wohnort:</summary>
+      <input [(ngModel)]="profile.city" name="city"
+             placeholder="Wohnort"
+             type="text"
+             class="form-control">
+      </details>
+    </div>
+  </div>
+
+  <!--  Alter-->
+  <div class="form-group">
+    <div class="col-md-8 offset-md-2 col-sm-2">
+      <details>
+      <summary>Alter:</summary>
+      <input [(ngModel)]="profile.age" name="age"
+             placeholder="Alter"
+             type="text"
+             class="form-control">
+      </details>
+    </div>
+  </div>
+
+  <!--  Interessen-->
+  <div class="form-group">
+    <div class="col-md-8 offset-md-2 col-sm-2">
+      <details>
+      <summary>Interessen:</summary>
+      <input [(ngModel)]="profile.interests" name="interests"
+             placeholder="Interessen"
+             type="text"
+             class="form-control">
+      </details>
+    </div>
+  </div>
+
+  <!--  Absichten-->
+  <div class="form-group">
+    <div class="col-md-8 offset-md-2 col-sm-2">
+      <details>
+      <summary>Absichten:</summary>
+      <input [(ngModel)]="profile.intentions" name="intentions"
+             placeholder="Absichten"
+             type="text"
+             class="form-control">
+      </details>
+    </div>
+  </div>
+
+  <div class="col-md-8 offset-md-2 col-sm-2">
+    <button (click)="form.checkValidity()?save():1" name="submit" type="submit" class="btn btn-primary">
+      Daten anzeigen
+    </button>
+  </div>
+</form>
+  </div>
+
+<div class="col-md-6">
+<table>
+  <tr *ngFor="let p of list">
+    <td *ngIf="p.uid == db.userData">{{p.firstName}}</td>
+    <td>{{p.surname}}</td>
+    <td>{{p.allergies}}</td>
+    <td>{{p.city}}</td>
+    <td>{{p.age}}</td>
+    <td>{{p.interests}}</td>
+    <td>{{p.intentions}}</td>
+    <td>  <button (click)="delete(p)">
+      <i class="material-icons">
+        delete
+      </i>
+    </button></td>
+  </tr>
+</table>
+
+</div>
+  </div>
+</div>
